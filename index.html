@@ -2122,9 +2122,8 @@
     function drawCharacterSilhouette(ctx, x, y, scale, facing, walkCycle, wardrobe, colors, dynState = null) {
       const darkCharcoal = '#1c1d1b';
       const deepBlack = '#111210';
-      const midGrey = '#747572';
-      const sashGrey = '#474846';
-      const flowerDark = '#525350';
+      const midGrey = '#1c1d1b';
+      const sashGrey = '#1c1d1b';
       const glowColor = wardrobe.glow || '#ffae2b';
 
       const timeNow = performance.now();
@@ -2378,39 +2377,7 @@
         ctx.stroke();
       }
 
-      // Always render the signature papercraft polygonal rose bloom from image_7cf31f.png
-      ctx.save();
-      ctx.translate(ornX, ornY);
-      // Outer light-grey polygonal petals
-      ctx.fillStyle = midGrey;
-      ctx.beginPath();
-      ctx.moveTo(-6.2, -1.5);
-      ctx.lineTo(-3.5, -5.8);
-      ctx.lineTo(2.5, -4.8);
-      ctx.lineTo(5.2, 0.5);
-      ctx.lineTo(2.2, 5.2);
-      ctx.lineTo(-4.5, 4.5);
-      ctx.closePath();
-      ctx.fill();
-
-      // Inner darker-grey geometric rose swirl
-      ctx.fillStyle = flowerDark;
-      ctx.beginPath();
-      ctx.moveTo(-5.8, 0.2);
-      ctx.lineTo(-1.8, -3.2);
-      ctx.lineTo(2.0, -1.2);
-      ctx.lineTo(0.5, 3.2);
-      ctx.lineTo(-4.2, 3.8);
-      ctx.closePath();
-      ctx.fill();
-
-      // Tiny dark center bud
-      ctx.fillStyle = darkCharcoal;
-      ctx.beginPath();
-      ctx.arc(-1.2, 0.2, 1.3, 0, Math.PI * 2);
-      ctx.fill();
-      ctx.restore();
-
+    
       ctx.restore();
     }
 
